@@ -17,7 +17,7 @@ namespace Lab05_CompanyManager
         public void CloseDatabase()
         {
             DB.Close(); // Close database file
-        } 
+        }
 
         public Database()
         {
@@ -26,9 +26,9 @@ namespace Lab05_CompanyManager
         }
 
         public void CreateDatabase()
-        {          
+        {
             // Read txt file and insert into database
-            CreateEmployee("data_Employee.txt"); 
+            CreateEmployee("data_Employee.txt");
             CreateDependents("data_Dependent.txt");
             CreateProject("data_Project.txt");
             CreateDepartment("data_Department.txt");
@@ -47,7 +47,7 @@ namespace Lab05_CompanyManager
             result = DB.QueryByExample(dependent);
             int count = result.Count;
 
-            for(int i = 0; i < count; ++i)
+            for (int i = 0; i < count; ++i)
             {
                 DB.Delete(result[i]);
             }
@@ -62,7 +62,7 @@ namespace Lab05_CompanyManager
                 for (int i = 0; i < n; ++i)
                 {
                     string line = fin.ReadLine();
-                    if(line != null)
+                    if (line != null)
                     {
                         string[] fields = line.Split(',');
                         int ssn_Employee = int.Parse(fields[0]);
@@ -79,15 +79,15 @@ namespace Lab05_CompanyManager
                             Relationship = relationship,
                         };
 
-                        // Tìm Employee với Ssn = ssn_Employee
-                        // Điều kiện: trong database phải có sẵn dữ liệu Employee thì mới tìm được
+                        // Find Employee with Ssn = ssn_Employee
+                        // Condition: Employee data must be available in the database
                         Employee e = new Employee(ssn_Employee, null, null, null, null, null, 0, null);
                         IObjectSet result_Employee = DB.QueryByExample(e);
-                        if(result_Employee.Count != 0)
+                        if (result_Employee.Count != 0)
                         {
                             Employee employee = (Employee)result_Employee[0];
                             d.DependentOf = employee;
-                            if(employee.Dependents == null)
+                            if (employee.Dependents == null)
                             {
                                 employee.Dependents = new List<Dependent>();
                                 employee.Dependents.Add(d);
@@ -96,7 +96,7 @@ namespace Lab05_CompanyManager
                             {
                                 employee.Dependents.Add(d);
                             }
-                            
+
                             DB.Store(d);
                             DB.Store(employee);
                         }
@@ -115,7 +115,7 @@ namespace Lab05_CompanyManager
             result = DB.QueryByExample(employee);
             int count = result.Count;
 
-            for(int i = 0; i < count; ++i)
+            for (int i = 0; i < count; ++i)
             {
                 DB.Delete(result[i]);
             }
@@ -131,7 +131,7 @@ namespace Lab05_CompanyManager
                 {
                     string line = fin.ReadLine();
 
-                    if(line != null)
+                    if (line != null)
                     {
                         string[] fields = line.Split(':');
 
@@ -246,7 +246,7 @@ namespace Lab05_CompanyManager
 
                         List<string> list_Location = new List<string>();
                         string[] fields_Locations = locations.Split(',');
-                        for(int j = 0; j < fields_Locations.Length; ++j)
+                        for (int j = 0; j < fields_Locations.Length; ++j)
                         {
                             list_Location.Add(fields_Locations[j]);
                         }
@@ -285,7 +285,7 @@ namespace Lab05_CompanyManager
                 FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
                 StreamReader fin = new StreamReader(fs); // Initialize variable to read file
                 int n = int.Parse(fin.ReadLine()); // Read first line to get size of WorksOn
-                                                 
+
                 for (int i = 0; i < n; ++i)
                 {
                     string line = fin.ReadLine();
@@ -306,18 +306,18 @@ namespace Lab05_CompanyManager
                         Employee e = null;
                         Project p = null;
 
-                        // Tìm Employee với Ssn = ssn_Employee
-                        // Điều kiện: trong database phải có sẵn dữ liệu Employee thì mới tìm được
+                        // Find Employee with Ssn = ssn_Employee
+                        // Condition: Employee data must be available in the database
                         Employee employee = new Employee(ssn_Employee, null, null, null, null, null, 0, null);
                         IObjectSet result_Employee = DB.QueryByExample(employee);
-                        if(result_Employee.Count != 0)
+                        if (result_Employee.Count != 0)
                         {
                             e = (Employee)result_Employee[0];
                             w.Employee = e;
                         }
 
-                        // Tìm Project với PNumber = number_Project
-                        // Điều kiện: trong database phải có sẵn dữ liệu Project thì mới tìm được
+                        // Find Project with PNumber = number_Project
+                        // Condition: Project data must be available in the database
                         Project project = new Project(number_Project, null, null);
                         IObjectSet result_Project = DB.QueryByExample(project);
                         if (result_Project.Count != 0)
@@ -326,7 +326,7 @@ namespace Lab05_CompanyManager
                             w.Project = p;
                         }
 
-                        if(e.WorksOn == null)
+                        if (e.WorksOn == null)
                         {
                             e.WorksOn = new List<WorksOn>();
                             e.WorksOn.Add(w);
@@ -373,20 +373,22 @@ namespace Lab05_CompanyManager
             IObjectSet result = DB.QueryByExample(d);
             return result;
         }
+
         public IObjectSet result_WorksOn()
         {
             WorksOn w = new WorksOn(0);
             IObjectSet result = DB.QueryByExample(w);
             return result;
         }
+
         public void SetManager(string fileName)
         {
             // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
-                int n = int.Parse(fin.ReadLine()); 
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
+                int n = int.Parse(fin.ReadLine());
 
                 for (int i = 0; i < n; ++i)
                 {
@@ -403,26 +405,26 @@ namespace Lab05_CompanyManager
                         Employee e = null;
                         Department d = null;
 
-                        // Tìm Employee với Ssn = ssn_Employee
-                        // Điều kiện: phải có sẵn dữ liệu Employee trong database mới tìm được
+                        // Find Employee with Ssn = ssn_Employee
+                        // Condition: Employee data must be available in the database
                         Employee employee = new Employee(ssn_Employee, null, null, null, null, null, 0, null);
                         IObjectSet result_Employee = DB.QueryByExample(employee);
-                        if(result_Employee.Count != 0)
+                        if (result_Employee.Count != 0)
                         {
                             e = (Employee)result_Employee[0];
                         }
 
-                        // Tìm Department với DNumber = number_Department
-                        // Điều kiện: phải có sẵn dữ liệu Department trong database mới tìm được
+                        // Find Department with DNumber = number_Department
+                        // Condition: Department data must be available in the database
                         Department department = new Department(number_Department, null, null);
                         IObjectSet result_Department = DB.QueryByExample(department);
-                        if(result_Department.Count != 0)
+                        if (result_Department.Count != 0)
                         {
                             d = (Department)result_Department[0];
                         }
 
-                        // Thiết lập quan hệ Manager (giữa Employee và Department)
-                        if(e != null && d != null)
+                        // Set up Manager relationship (between Employee and Department)                        
+                        if (e != null && d != null)
                         {
                             d.MgrStartDate = mgrStartDate;
                             d.Manager = e;
@@ -436,6 +438,7 @@ namespace Lab05_CompanyManager
                 fs.Close();
             }
         }
+
         public void SetControlledBy(string fileName)
         {
             // Read data from txt file
@@ -443,7 +446,7 @@ namespace Lab05_CompanyManager
             {
                 FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
                 StreamReader fin = new StreamReader(fs); // Initialize variable to read file
-                int n = int.Parse(fin.ReadLine()); 
+                int n = int.Parse(fin.ReadLine());
 
                 for (int i = 0; i < n; ++i)
                 {
@@ -461,8 +464,8 @@ namespace Lab05_CompanyManager
                         List<Project> Projects = new List<Project>();
                         Project p = null;
 
-                        // Tìm Department với DNumber = number_Department
-                        // Điều kiện: phải có sẵn dữ liệu Department trong database mới tìm được
+                        // Find Department with DNumber = number_Department
+                        // Condition: Must have Department data in the database
                         Department department = new Department(number_Department, null, null);
                         IObjectSet result_Department = DB.QueryByExample(department);
                         if (result_Department.Count != 0)
@@ -470,7 +473,7 @@ namespace Lab05_CompanyManager
                             d = (Department)result_Department[0];
                         }
 
-                        for(int j = 0; j < fields_NumberProject.Length; ++j)
+                        for (int j = 0; j < fields_NumberProject.Length; ++j)
                         {
                             int number_Project = int.Parse(fields_NumberProject[j]);
                             Project project = new Project(number_Project, null, null);
@@ -484,7 +487,7 @@ namespace Lab05_CompanyManager
                             }
                         }
 
-                        if(Projects != null && d != null)
+                        if (Projects != null && d != null)
                         {
                             d.Projects = Projects;
                             DB.Store(d);
@@ -502,7 +505,7 @@ namespace Lab05_CompanyManager
             {
                 FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
                 StreamReader fin = new StreamReader(fs); // Initialize variable to read file
-                int n = int.Parse(fin.ReadLine()); 
+                int n = int.Parse(fin.ReadLine());
 
                 for (int i = 0; i < n; ++i)
                 {
@@ -520,8 +523,8 @@ namespace Lab05_CompanyManager
                         List<Employee> Employees = new List<Employee>();
                         Employee p = null;
 
-                        // Tìm Department với DNumber = number_Department
-                        // Điều kiện: phải có sẵn dữ liệu Department trong database mới tìm được
+                        // Find Department with DNumber = number_Department
+                        // Condition: Must have Department data in the database
                         Department department = new Department(number_Department, null, null);
                         IObjectSet result_Department = DB.QueryByExample(department);
                         if (result_Department.Count != 0)

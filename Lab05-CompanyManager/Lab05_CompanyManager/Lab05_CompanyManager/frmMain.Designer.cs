@@ -1648,7 +1648,7 @@ namespace Lab05_CompanyManager
             this.button_DeleteWorksOn.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button_DeleteWorksOn.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
             this.button_DeleteWorksOn.ForeColor = System.Drawing.Color.White;
-            this.button_DeleteWorksOn.Location = new System.Drawing.Point(20, 239);
+            this.button_DeleteWorksOn.Location = new System.Drawing.Point(20, 173);
             this.button_DeleteWorksOn.Name = "button_DeleteWorksOn";
             this.button_DeleteWorksOn.Size = new System.Drawing.Size(190, 36);
             this.button_DeleteWorksOn.TabIndex = 39;
@@ -1661,7 +1661,7 @@ namespace Lab05_CompanyManager
             this.button_ModifyWorksOn.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button_ModifyWorksOn.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
             this.button_ModifyWorksOn.ForeColor = System.Drawing.Color.White;
-            this.button_ModifyWorksOn.Location = new System.Drawing.Point(20, 197);
+            this.button_ModifyWorksOn.Location = new System.Drawing.Point(20, 131);
             this.button_ModifyWorksOn.Name = "button_ModifyWorksOn";
             this.button_ModifyWorksOn.Size = new System.Drawing.Size(190, 36);
             this.button_ModifyWorksOn.TabIndex = 38;
@@ -1674,7 +1674,7 @@ namespace Lab05_CompanyManager
             this.button_AddWorksOn.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button_AddWorksOn.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
             this.button_AddWorksOn.ForeColor = System.Drawing.Color.White;
-            this.button_AddWorksOn.Location = new System.Drawing.Point(20, 155);
+            this.button_AddWorksOn.Location = new System.Drawing.Point(20, 89);
             this.button_AddWorksOn.Name = "button_AddWorksOn";
             this.button_AddWorksOn.Size = new System.Drawing.Size(190, 36);
             this.button_AddWorksOn.TabIndex = 37;
@@ -1685,7 +1685,7 @@ namespace Lab05_CompanyManager
             // label_NameProjectWorksOn
             // 
             this.label_NameProjectWorksOn.AutoSize = true;
-            this.label_NameProjectWorksOn.Location = new System.Drawing.Point(648, 107);
+            this.label_NameProjectWorksOn.Location = new System.Drawing.Point(648, 41);
             this.label_NameProjectWorksOn.Name = "label_NameProjectWorksOn";
             this.label_NameProjectWorksOn.Size = new System.Drawing.Size(41, 15);
             this.label_NameProjectWorksOn.TabIndex = 36;
@@ -1694,7 +1694,7 @@ namespace Lab05_CompanyManager
             // label_NumberProjectWorksOn
             // 
             this.label_NumberProjectWorksOn.AutoSize = true;
-            this.label_NumberProjectWorksOn.Location = new System.Drawing.Point(542, 107);
+            this.label_NumberProjectWorksOn.Location = new System.Drawing.Point(542, 41);
             this.label_NumberProjectWorksOn.Name = "label_NumberProjectWorksOn";
             this.label_NumberProjectWorksOn.Size = new System.Drawing.Size(52, 15);
             this.label_NumberProjectWorksOn.TabIndex = 35;
@@ -1703,7 +1703,7 @@ namespace Lab05_CompanyManager
             // label_NameEmployeeWorksOn
             // 
             this.label_NameEmployeeWorksOn.AutoSize = true;
-            this.label_NameEmployeeWorksOn.Location = new System.Drawing.Point(324, 106);
+            this.label_NameEmployeeWorksOn.Location = new System.Drawing.Point(324, 40);
             this.label_NameEmployeeWorksOn.Name = "label_NameEmployeeWorksOn";
             this.label_NameEmployeeWorksOn.Size = new System.Drawing.Size(41, 15);
             this.label_NameEmployeeWorksOn.TabIndex = 34;
@@ -1712,7 +1712,7 @@ namespace Lab05_CompanyManager
             // label_SsnEmployeeWorksOn
             // 
             this.label_SsnEmployeeWorksOn.AutoSize = true;
-            this.label_SsnEmployeeWorksOn.Location = new System.Drawing.Point(218, 106);
+            this.label_SsnEmployeeWorksOn.Location = new System.Drawing.Point(218, 40);
             this.label_SsnEmployeeWorksOn.Name = "label_SsnEmployeeWorksOn";
             this.label_SsnEmployeeWorksOn.Size = new System.Drawing.Size(28, 15);
             this.label_SsnEmployeeWorksOn.TabIndex = 33;
@@ -1721,7 +1721,7 @@ namespace Lab05_CompanyManager
             // label_HoursWorksOn
             // 
             this.label_HoursWorksOn.AutoSize = true;
-            this.label_HoursWorksOn.Location = new System.Drawing.Point(107, 107);
+            this.label_HoursWorksOn.Location = new System.Drawing.Point(107, 41);
             this.label_HoursWorksOn.Name = "label_HoursWorksOn";
             this.label_HoursWorksOn.Size = new System.Drawing.Size(40, 15);
             this.label_HoursWorksOn.TabIndex = 32;
@@ -1730,7 +1730,7 @@ namespace Lab05_CompanyManager
             // textBox_SsnEmployeeWorksOn
             // 
             this.textBox_SsnEmployeeWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SsnEmployeeWorksOn.Location = new System.Drawing.Point(221, 122);
+            this.textBox_SsnEmployeeWorksOn.Location = new System.Drawing.Point(221, 56);
             this.textBox_SsnEmployeeWorksOn.Name = "textBox_SsnEmployeeWorksOn";
             this.textBox_SsnEmployeeWorksOn.ReadOnly = true;
             this.textBox_SsnEmployeeWorksOn.Size = new System.Drawing.Size(100, 27);
@@ -1739,7 +1739,7 @@ namespace Lab05_CompanyManager
             // textBox_NameEmployeeWorksOn
             // 
             this.textBox_NameEmployeeWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_NameEmployeeWorksOn.Location = new System.Drawing.Point(327, 122);
+            this.textBox_NameEmployeeWorksOn.Location = new System.Drawing.Point(327, 56);
             this.textBox_NameEmployeeWorksOn.Name = "textBox_NameEmployeeWorksOn";
             this.textBox_NameEmployeeWorksOn.ReadOnly = true;
             this.textBox_NameEmployeeWorksOn.Size = new System.Drawing.Size(201, 27);
@@ -1748,7 +1748,7 @@ namespace Lab05_CompanyManager
             // textBox_NumberProjectWorksOn
             // 
             this.textBox_NumberProjectWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_NumberProjectWorksOn.Location = new System.Drawing.Point(545, 122);
+            this.textBox_NumberProjectWorksOn.Location = new System.Drawing.Point(545, 56);
             this.textBox_NumberProjectWorksOn.Name = "textBox_NumberProjectWorksOn";
             this.textBox_NumberProjectWorksOn.ReadOnly = true;
             this.textBox_NumberProjectWorksOn.Size = new System.Drawing.Size(100, 27);
@@ -1757,7 +1757,7 @@ namespace Lab05_CompanyManager
             // textBox_NameProjectWorksOn
             // 
             this.textBox_NameProjectWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_NameProjectWorksOn.Location = new System.Drawing.Point(651, 123);
+            this.textBox_NameProjectWorksOn.Location = new System.Drawing.Point(651, 57);
             this.textBox_NameProjectWorksOn.Name = "textBox_NameProjectWorksOn";
             this.textBox_NameProjectWorksOn.ReadOnly = true;
             this.textBox_NameProjectWorksOn.Size = new System.Drawing.Size(149, 27);
@@ -1766,7 +1766,7 @@ namespace Lab05_CompanyManager
             // textBox_SsnEmployeeWorksOnOld
             // 
             this.textBox_SsnEmployeeWorksOnOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SsnEmployeeWorksOnOld.Location = new System.Drawing.Point(221, 77);
+            this.textBox_SsnEmployeeWorksOnOld.Location = new System.Drawing.Point(221, 11);
             this.textBox_SsnEmployeeWorksOnOld.Name = "textBox_SsnEmployeeWorksOnOld";
             this.textBox_SsnEmployeeWorksOnOld.ReadOnly = true;
             this.textBox_SsnEmployeeWorksOnOld.Size = new System.Drawing.Size(100, 27);
@@ -1776,7 +1776,7 @@ namespace Lab05_CompanyManager
             // textBox_NumberProjectWorksOnOld
             // 
             this.textBox_NumberProjectWorksOnOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_NumberProjectWorksOnOld.Location = new System.Drawing.Point(544, 77);
+            this.textBox_NumberProjectWorksOnOld.Location = new System.Drawing.Point(544, 11);
             this.textBox_NumberProjectWorksOnOld.Name = "textBox_NumberProjectWorksOnOld";
             this.textBox_NumberProjectWorksOnOld.ReadOnly = true;
             this.textBox_NumberProjectWorksOnOld.Size = new System.Drawing.Size(100, 27);
@@ -1786,7 +1786,7 @@ namespace Lab05_CompanyManager
             // textBox_HoursWorksOn
             // 
             this.textBox_HoursWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_HoursWorksOn.Location = new System.Drawing.Point(110, 123);
+            this.textBox_HoursWorksOn.Location = new System.Drawing.Point(110, 57);
             this.textBox_HoursWorksOn.Name = "textBox_HoursWorksOn";
             this.textBox_HoursWorksOn.Size = new System.Drawing.Size(100, 27);
             this.textBox_HoursWorksOn.TabIndex = 25;
@@ -1810,10 +1810,10 @@ namespace Lab05_CompanyManager
             this.ssnEmployee,
             this.fnameEmployee,
             this.lnameEmployee});
-            this.dataGridView_EmployeeWorksOn.Location = new System.Drawing.Point(221, 154);
+            this.dataGridView_EmployeeWorksOn.Location = new System.Drawing.Point(221, 88);
             this.dataGridView_EmployeeWorksOn.Name = "dataGridView_EmployeeWorksOn";
             this.dataGridView_EmployeeWorksOn.RowHeadersWidth = 43;
-            this.dataGridView_EmployeeWorksOn.Size = new System.Drawing.Size(307, 380);
+            this.dataGridView_EmployeeWorksOn.Size = new System.Drawing.Size(307, 446);
             this.dataGridView_EmployeeWorksOn.TabIndex = 2;
             this.dataGridView_EmployeeWorksOn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_EmployeeWorksOn_CellClick);
             // 
@@ -1842,10 +1842,10 @@ namespace Lab05_CompanyManager
             this.dataGridView_ProjectWorksOn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numberProject,
             this.nameProject});
-            this.dataGridView_ProjectWorksOn.Location = new System.Drawing.Point(544, 154);
+            this.dataGridView_ProjectWorksOn.Location = new System.Drawing.Point(544, 88);
             this.dataGridView_ProjectWorksOn.Name = "dataGridView_ProjectWorksOn";
             this.dataGridView_ProjectWorksOn.RowHeadersWidth = 43;
-            this.dataGridView_ProjectWorksOn.Size = new System.Drawing.Size(256, 380);
+            this.dataGridView_ProjectWorksOn.Size = new System.Drawing.Size(256, 446);
             this.dataGridView_ProjectWorksOn.TabIndex = 1;
             this.dataGridView_ProjectWorksOn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ProjectWorksOn_CellClick);
             // 
