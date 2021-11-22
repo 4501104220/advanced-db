@@ -8,7 +8,7 @@ namespace Lab05_CompanyManager
 {
     public class WorksOn
     {
-        // Thuộc tính
+        // Props
         public float Hours { get; set; }
 
         public WorksOn(float hours = 0)
@@ -16,8 +16,9 @@ namespace Lab05_CompanyManager
             Hours = hours;
         }
 
-        // Quan hệ
+        // Relationship
         public Employee Employee { get; set; }
+
         public Project Project { get; set; }
     }
 }

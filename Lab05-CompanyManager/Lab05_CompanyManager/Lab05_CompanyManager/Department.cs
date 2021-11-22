@@ -8,7 +8,7 @@ namespace Lab05_CompanyManager
 {
     public class Department
     {
-        // Thuộc tính
+        // Method
         public int DNumber { get; set; }
         public string DName { get; set; }
         public List<string> Locations { get; set; }
@@ -20,7 +20,7 @@ namespace Lab05_CompanyManager
             Locations = locations;
         }
 
-        // Quan hệ
+        // Relationship
         public List<Employee> Employees { get; set; }
         public Employee Manager { get; set; }
         public List<Project> Projects { get; set; }

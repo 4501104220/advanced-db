@@ -8,12 +8,12 @@ namespace Lab05_CompanyManager
 {
     public class Project
     {
-        // Thuộc tính
+        // Props
         public int PNumber { get; set; }
         public string PName { get; set; }
         public string Location { get; set; }
 
-        // Khởi tạo
+        // Initial
         public Project(int pnumber = 0, string pname = "", string location = "")
         {
             PNumber = pnumber;
@@ -21,13 +21,13 @@ namespace Lab05_CompanyManager
             Location = location;
         }
 
-        // Phương thức
+        // Method
         public string _ToString()
         {
             return PNumber.ToString() + "," + PName + "," + Location;
         }
 
-        // Quan hệ
+        // Relationship
         public Department ControlledBy { get; set; }
         public List<WorksOn> WorksOn { get; set; }
     }

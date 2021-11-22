@@ -8,7 +8,7 @@ namespace Lab05_CompanyManager
 {
     public class Employee
     {
-        // Thuộc tính
+        // Props
         public int Ssn { get; set; }
         public string FName { get; set; }
         public string MInit { get; set; }
@@ -18,7 +18,7 @@ namespace Lab05_CompanyManager
         public double Salary { get; set; }
         public string Gender { get; set; }
 
-        // Khởi tạo
+        // Initial
         public Employee (int ssn = 0, string fname = "", string minit = "", string lname = "", string address = "", string birthdate = "", double salary = 0, string gender = "")
         {
             Ssn = ssn;
@@ -31,13 +31,13 @@ namespace Lab05_CompanyManager
             Gender = gender;
         }
 
-        // Phương thức
+        // Method
         public string _ToString()
         {
             return FName + ":" + MInit + ":" + LName + ":" + Ssn.ToString() + ":" + BirthDate + ":" + Address + ":" + Gender + ":" + Salary.ToString();
         }
 
-        // Quan hệ
+        // Relationship
         public Department WorksFor { get; set; }
         public Department Manager { get; set; }
         public List<WorksOn> WorksOn { get; set; }

@@ -286,11 +286,12 @@ namespace Lab05_CompanyManager
             this.worksonProject_CTV4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_CauTruyVan4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_TrungInfo = new System.Windows.Forms.Label();
+            this.label_SaInfo = new System.Windows.Forms.Label();
+            this.label_SangInfo = new System.Windows.Forms.Label();
+            this.label_ThangInfo = new System.Windows.Forms.Label();
+            this.label_VyInfo = new System.Windows.Forms.Label();
+            this.label_TeamName = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_Employee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employee)).BeginInit();
@@ -349,6 +350,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_Employee
             // 
+            this.tabPage_Employee.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_Employee.Controls.Add(this.comboBox_GenderEmployee);
             this.tabPage_Employee.Controls.Add(this.button_Reset_Employee);
             this.tabPage_Employee.Controls.Add(this.button_DeleteEmployee);
@@ -370,13 +372,13 @@ namespace Lab05_CompanyManager
             this.tabPage_Employee.Controls.Add(this.label_FNameEmployee);
             this.tabPage_Employee.Controls.Add(this.label_SsnEmployee);
             this.tabPage_Employee.Controls.Add(this.dataGridView_Employee);
+            this.tabPage_Employee.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage_Employee.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Employee.Name = "tabPage_Employee";
             this.tabPage_Employee.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_Employee.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_Employee.TabIndex = 0;
             this.tabPage_Employee.Text = "Employee";
-            this.tabPage_Employee.UseVisualStyleBackColor = true;
             // 
             // comboBox_GenderEmployee
             // 
@@ -399,35 +401,41 @@ namespace Lab05_CompanyManager
             // 
             // button_DeleteEmployee
             // 
-            this.button_DeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteEmployee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_DeleteEmployee.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_DeleteEmployee.ForeColor = System.Drawing.Color.White;
             this.button_DeleteEmployee.Location = new System.Drawing.Point(8, 364);
             this.button_DeleteEmployee.Name = "button_DeleteEmployee";
-            this.button_DeleteEmployee.Size = new System.Drawing.Size(152, 32);
+            this.button_DeleteEmployee.Size = new System.Drawing.Size(228, 32);
             this.button_DeleteEmployee.TabIndex = 19;
             this.button_DeleteEmployee.Text = "Delete Employee";
-            this.button_DeleteEmployee.UseVisualStyleBackColor = true;
+            this.button_DeleteEmployee.UseVisualStyleBackColor = false;
             this.button_DeleteEmployee.Click += new System.EventHandler(this.button_DeleteEmployee_Click);
             // 
             // button_ModifyEmployee
             // 
-            this.button_ModifyEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ModifyEmployee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_ModifyEmployee.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_ModifyEmployee.ForeColor = System.Drawing.Color.White;
             this.button_ModifyEmployee.Location = new System.Drawing.Point(8, 326);
             this.button_ModifyEmployee.Name = "button_ModifyEmployee";
-            this.button_ModifyEmployee.Size = new System.Drawing.Size(152, 32);
+            this.button_ModifyEmployee.Size = new System.Drawing.Size(228, 32);
             this.button_ModifyEmployee.TabIndex = 18;
             this.button_ModifyEmployee.Text = "Modify Employee";
-            this.button_ModifyEmployee.UseVisualStyleBackColor = true;
+            this.button_ModifyEmployee.UseVisualStyleBackColor = false;
             this.button_ModifyEmployee.Click += new System.EventHandler(this.button_ModifyEmployee_Click);
             // 
             // button_AddEmployee
             // 
-            this.button_AddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AddEmployee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_AddEmployee.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_AddEmployee.ForeColor = System.Drawing.Color.White;
             this.button_AddEmployee.Location = new System.Drawing.Point(8, 288);
             this.button_AddEmployee.Name = "button_AddEmployee";
-            this.button_AddEmployee.Size = new System.Drawing.Size(152, 32);
+            this.button_AddEmployee.Size = new System.Drawing.Size(228, 32);
             this.button_AddEmployee.TabIndex = 17;
             this.button_AddEmployee.Text = "Add Employee";
-            this.button_AddEmployee.UseVisualStyleBackColor = true;
+            this.button_AddEmployee.UseVisualStyleBackColor = false;
             this.button_AddEmployee.Click += new System.EventHandler(this.button_AddEmployee_Click);
             // 
             // textBox_FNameEmployee
@@ -700,6 +708,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_Dependent
             // 
+            this.tabPage_Dependent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_Dependent.Controls.Add(this.comboBox_GenderDependent);
             this.tabPage_Dependent.Controls.Add(this.textBox_SsnDependentOfOld);
             this.tabPage_Dependent.Controls.Add(this.textBox_RelationshipDependentOld);
@@ -730,7 +739,6 @@ namespace Lab05_CompanyManager
             this.tabPage_Dependent.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_Dependent.TabIndex = 1;
             this.tabPage_Dependent.Text = "Dependent";
-            this.tabPage_Dependent.UseVisualStyleBackColor = true;
             // 
             // comboBox_GenderDependent
             // 
@@ -893,35 +901,41 @@ namespace Lab05_CompanyManager
             // 
             // button_DeleteDependent
             // 
-            this.button_DeleteDependent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteDependent.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_DeleteDependent.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_DeleteDependent.ForeColor = System.Drawing.Color.White;
             this.button_DeleteDependent.Location = new System.Drawing.Point(8, 273);
             this.button_DeleteDependent.Name = "button_DeleteDependent";
             this.button_DeleteDependent.Size = new System.Drawing.Size(194, 32);
             this.button_DeleteDependent.TabIndex = 11;
             this.button_DeleteDependent.Text = "Delete Dependent";
-            this.button_DeleteDependent.UseVisualStyleBackColor = true;
+            this.button_DeleteDependent.UseVisualStyleBackColor = false;
             this.button_DeleteDependent.Click += new System.EventHandler(this.button_DeleteDependent_Click);
             // 
             // button_ModifyDependent
             // 
-            this.button_ModifyDependent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ModifyDependent.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_ModifyDependent.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_ModifyDependent.ForeColor = System.Drawing.Color.White;
             this.button_ModifyDependent.Location = new System.Drawing.Point(8, 235);
             this.button_ModifyDependent.Name = "button_ModifyDependent";
             this.button_ModifyDependent.Size = new System.Drawing.Size(194, 32);
             this.button_ModifyDependent.TabIndex = 10;
             this.button_ModifyDependent.Text = "Modify Dependent";
-            this.button_ModifyDependent.UseVisualStyleBackColor = true;
+            this.button_ModifyDependent.UseVisualStyleBackColor = false;
             this.button_ModifyDependent.Click += new System.EventHandler(this.button_ModifyDependent_Click);
             // 
             // button_AddDependent
             // 
-            this.button_AddDependent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AddDependent.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_AddDependent.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_AddDependent.ForeColor = System.Drawing.Color.White;
             this.button_AddDependent.Location = new System.Drawing.Point(8, 197);
             this.button_AddDependent.Name = "button_AddDependent";
             this.button_AddDependent.Size = new System.Drawing.Size(194, 32);
             this.button_AddDependent.TabIndex = 9;
             this.button_AddDependent.Text = "Add Dependent";
-            this.button_AddDependent.UseVisualStyleBackColor = true;
+            this.button_AddDependent.UseVisualStyleBackColor = false;
             this.button_AddDependent.Click += new System.EventHandler(this.button_AddDependent_Click);
             // 
             // textBox_BirthDateDependent
@@ -1029,6 +1043,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_Project
             // 
+            this.tabPage_Project.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_Project.Controls.Add(this.comboBox_LocationProject);
             this.tabPage_Project.Controls.Add(this.textBox_NumberControlledByOld);
             this.tabPage_Project.Controls.Add(this.label_controlledby_DepartmetProject);
@@ -1052,7 +1067,6 @@ namespace Lab05_CompanyManager
             this.tabPage_Project.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_Project.TabIndex = 2;
             this.tabPage_Project.Text = "Project";
-            this.tabPage_Project.UseVisualStyleBackColor = true;
             // 
             // comboBox_LocationProject
             // 
@@ -1158,35 +1172,41 @@ namespace Lab05_CompanyManager
             // 
             // button_DeleteProject
             // 
-            this.button_DeleteProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteProject.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_DeleteProject.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_DeleteProject.ForeColor = System.Drawing.Color.White;
             this.button_DeleteProject.Location = new System.Drawing.Point(8, 244);
             this.button_DeleteProject.Name = "button_DeleteProject";
             this.button_DeleteProject.Size = new System.Drawing.Size(198, 36);
             this.button_DeleteProject.TabIndex = 9;
             this.button_DeleteProject.Text = "Delete Project";
-            this.button_DeleteProject.UseVisualStyleBackColor = true;
+            this.button_DeleteProject.UseVisualStyleBackColor = false;
             this.button_DeleteProject.Click += new System.EventHandler(this.button_DeleteProject_Click);
             // 
             // button_ModifyProject
             // 
-            this.button_ModifyProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ModifyProject.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_ModifyProject.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_ModifyProject.ForeColor = System.Drawing.Color.White;
             this.button_ModifyProject.Location = new System.Drawing.Point(8, 202);
             this.button_ModifyProject.Name = "button_ModifyProject";
             this.button_ModifyProject.Size = new System.Drawing.Size(198, 36);
             this.button_ModifyProject.TabIndex = 8;
             this.button_ModifyProject.Text = "Modify Project";
-            this.button_ModifyProject.UseVisualStyleBackColor = true;
+            this.button_ModifyProject.UseVisualStyleBackColor = false;
             this.button_ModifyProject.Click += new System.EventHandler(this.button_ModifyProject_Click);
             // 
             // button_AddProject
             // 
-            this.button_AddProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AddProject.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_AddProject.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_AddProject.ForeColor = System.Drawing.Color.White;
             this.button_AddProject.Location = new System.Drawing.Point(8, 160);
             this.button_AddProject.Name = "button_AddProject";
             this.button_AddProject.Size = new System.Drawing.Size(198, 36);
             this.button_AddProject.TabIndex = 7;
             this.button_AddProject.Text = "Add Project";
-            this.button_AddProject.UseVisualStyleBackColor = true;
+            this.button_AddProject.UseVisualStyleBackColor = false;
             this.button_AddProject.Click += new System.EventHandler(this.button_AddProject_Click);
             // 
             // textBox_NameProject
@@ -1291,6 +1311,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_Department
             // 
+            this.tabPage_Department.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_Department.Controls.Add(this.textBox_MgrStartDate);
             this.tabPage_Department.Controls.Add(this.label_MgrStartDateManager);
             this.tabPage_Department.Controls.Add(this.textBox_SsnManagerOld);
@@ -1315,7 +1336,6 @@ namespace Lab05_CompanyManager
             this.tabPage_Department.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_Department.TabIndex = 3;
             this.tabPage_Department.Text = "Department";
-            this.tabPage_Department.UseVisualStyleBackColor = true;
             // 
             // textBox_MgrStartDate
             // 
@@ -1428,35 +1448,41 @@ namespace Lab05_CompanyManager
             // 
             // button_DeleteDepartment
             // 
-            this.button_DeleteDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteDepartment.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_DeleteDepartment.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_DeleteDepartment.ForeColor = System.Drawing.Color.White;
             this.button_DeleteDepartment.Location = new System.Drawing.Point(8, 246);
             this.button_DeleteDepartment.Name = "button_DeleteDepartment";
-            this.button_DeleteDepartment.Size = new System.Drawing.Size(190, 36);
+            this.button_DeleteDepartment.Size = new System.Drawing.Size(206, 36);
             this.button_DeleteDepartment.TabIndex = 9;
             this.button_DeleteDepartment.Text = "Delete Department";
-            this.button_DeleteDepartment.UseVisualStyleBackColor = true;
+            this.button_DeleteDepartment.UseVisualStyleBackColor = false;
             this.button_DeleteDepartment.Click += new System.EventHandler(this.button_DeleteDepartment_Click);
             // 
             // button_ModifyDepartment
             // 
-            this.button_ModifyDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ModifyDepartment.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_ModifyDepartment.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_ModifyDepartment.ForeColor = System.Drawing.Color.White;
             this.button_ModifyDepartment.Location = new System.Drawing.Point(8, 204);
             this.button_ModifyDepartment.Name = "button_ModifyDepartment";
-            this.button_ModifyDepartment.Size = new System.Drawing.Size(190, 36);
+            this.button_ModifyDepartment.Size = new System.Drawing.Size(206, 36);
             this.button_ModifyDepartment.TabIndex = 8;
             this.button_ModifyDepartment.Text = "Modify Department";
-            this.button_ModifyDepartment.UseVisualStyleBackColor = true;
+            this.button_ModifyDepartment.UseVisualStyleBackColor = false;
             this.button_ModifyDepartment.Click += new System.EventHandler(this.button_ModifyDepartment_Click);
             // 
             // button_AddDepartment
             // 
-            this.button_AddDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AddDepartment.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_AddDepartment.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_AddDepartment.ForeColor = System.Drawing.Color.White;
             this.button_AddDepartment.Location = new System.Drawing.Point(8, 162);
             this.button_AddDepartment.Name = "button_AddDepartment";
-            this.button_AddDepartment.Size = new System.Drawing.Size(190, 36);
+            this.button_AddDepartment.Size = new System.Drawing.Size(206, 36);
             this.button_AddDepartment.TabIndex = 7;
             this.button_AddDepartment.Text = "Add Department";
-            this.button_AddDepartment.UseVisualStyleBackColor = true;
+            this.button_AddDepartment.UseVisualStyleBackColor = false;
             this.button_AddDepartment.Click += new System.EventHandler(this.button_AddDepartment_Click);
             // 
             // textBox_LocationsDepartment
@@ -1587,6 +1613,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_WorksOn
             // 
+            this.tabPage_WorksOn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_WorksOn.Controls.Add(this.button_DeleteWorksOn);
             this.tabPage_WorksOn.Controls.Add(this.button_ModifyWorksOn);
             this.tabPage_WorksOn.Controls.Add(this.button_AddWorksOn);
@@ -1611,39 +1638,44 @@ namespace Lab05_CompanyManager
             this.tabPage_WorksOn.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_WorksOn.TabIndex = 4;
             this.tabPage_WorksOn.Text = "WorksOn";
-            this.tabPage_WorksOn.UseVisualStyleBackColor = true;
             // 
             // button_DeleteWorksOn
             // 
-            this.button_DeleteWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteWorksOn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_DeleteWorksOn.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_DeleteWorksOn.ForeColor = System.Drawing.Color.White;
             this.button_DeleteWorksOn.Location = new System.Drawing.Point(20, 239);
             this.button_DeleteWorksOn.Name = "button_DeleteWorksOn";
             this.button_DeleteWorksOn.Size = new System.Drawing.Size(190, 36);
             this.button_DeleteWorksOn.TabIndex = 39;
             this.button_DeleteWorksOn.Text = "Delete WorksOn";
-            this.button_DeleteWorksOn.UseVisualStyleBackColor = true;
+            this.button_DeleteWorksOn.UseVisualStyleBackColor = false;
             this.button_DeleteWorksOn.Click += new System.EventHandler(this.button_DeleteWorksOn_Click);
             // 
             // button_ModifyWorksOn
             // 
-            this.button_ModifyWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ModifyWorksOn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_ModifyWorksOn.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_ModifyWorksOn.ForeColor = System.Drawing.Color.White;
             this.button_ModifyWorksOn.Location = new System.Drawing.Point(20, 197);
             this.button_ModifyWorksOn.Name = "button_ModifyWorksOn";
             this.button_ModifyWorksOn.Size = new System.Drawing.Size(190, 36);
             this.button_ModifyWorksOn.TabIndex = 38;
             this.button_ModifyWorksOn.Text = "Modify WorksOn";
-            this.button_ModifyWorksOn.UseVisualStyleBackColor = true;
+            this.button_ModifyWorksOn.UseVisualStyleBackColor = false;
             this.button_ModifyWorksOn.Click += new System.EventHandler(this.button_ModifyWorksOn_Click);
             // 
             // button_AddWorksOn
             // 
-            this.button_AddWorksOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AddWorksOn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_AddWorksOn.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_AddWorksOn.ForeColor = System.Drawing.Color.White;
             this.button_AddWorksOn.Location = new System.Drawing.Point(20, 155);
             this.button_AddWorksOn.Name = "button_AddWorksOn";
             this.button_AddWorksOn.Size = new System.Drawing.Size(190, 36);
             this.button_AddWorksOn.TabIndex = 37;
             this.button_AddWorksOn.Text = "Add WorksOn";
-            this.button_AddWorksOn.UseVisualStyleBackColor = true;
+            this.button_AddWorksOn.UseVisualStyleBackColor = false;
             this.button_AddWorksOn.Click += new System.EventHandler(this.button_AddWorksOn_Click);
             // 
             // label_NameProjectWorksOn
@@ -1862,6 +1894,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_WorksFor
             // 
+            this.tabPage_WorksFor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_WorksFor.Controls.Add(this.label_ND2);
             this.tabPage_WorksFor.Controls.Add(this.label_ND1);
             this.tabPage_WorksFor.Controls.Add(this.button_SaveWorksFor);
@@ -1878,13 +1911,12 @@ namespace Lab05_CompanyManager
             this.tabPage_WorksFor.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_WorksFor.TabIndex = 9;
             this.tabPage_WorksFor.Text = "WorksFor";
-            this.tabPage_WorksFor.UseVisualStyleBackColor = true;
             // 
             // label_ND2
             // 
             this.label_ND2.AutoSize = true;
             this.label_ND2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ND2.Location = new System.Drawing.Point(411, 74);
+            this.label_ND2.Location = new System.Drawing.Point(397, 74);
             this.label_ND2.Name = "label_ND2";
             this.label_ND2.Size = new System.Drawing.Size(347, 17);
             this.label_ND2.TabIndex = 28;
@@ -1894,7 +1926,7 @@ namespace Lab05_CompanyManager
             // 
             this.label_ND1.AutoSize = true;
             this.label_ND1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ND1.Location = new System.Drawing.Point(411, 49);
+            this.label_ND1.Location = new System.Drawing.Point(397, 49);
             this.label_ND1.Name = "label_ND1";
             this.label_ND1.Size = new System.Drawing.Size(347, 17);
             this.label_ND1.TabIndex = 27;
@@ -1902,13 +1934,15 @@ namespace Lab05_CompanyManager
             // 
             // button_SaveWorksFor
             // 
-            this.button_SaveWorksFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SaveWorksFor.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_SaveWorksFor.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_SaveWorksFor.ForeColor = System.Drawing.Color.White;
             this.button_SaveWorksFor.Location = new System.Drawing.Point(539, 172);
             this.button_SaveWorksFor.Name = "button_SaveWorksFor";
             this.button_SaveWorksFor.Size = new System.Drawing.Size(75, 32);
             this.button_SaveWorksFor.TabIndex = 26;
             this.button_SaveWorksFor.Text = "Save";
-            this.button_SaveWorksFor.UseVisualStyleBackColor = true;
+            this.button_SaveWorksFor.UseVisualStyleBackColor = false;
             this.button_SaveWorksFor.Click += new System.EventHandler(this.button_SaveWorksFor_Click);
             // 
             // button_Reset_WorksFor
@@ -1952,7 +1986,7 @@ namespace Lab05_CompanyManager
             // label_EmployeeWorksFor
             // 
             this.label_EmployeeWorksFor.AutoSize = true;
-            this.label_EmployeeWorksFor.Location = new System.Drawing.Point(343, 27);
+            this.label_EmployeeWorksFor.Location = new System.Drawing.Point(337, 27);
             this.label_EmployeeWorksFor.Name = "label_EmployeeWorksFor";
             this.label_EmployeeWorksFor.Size = new System.Drawing.Size(62, 15);
             this.label_EmployeeWorksFor.TabIndex = 3;
@@ -1965,7 +1999,7 @@ namespace Lab05_CompanyManager
             this.ssnEmployeeWorksFor,
             this.fnameEmployeeWorksFor,
             this.lnameEmployeeWorksFor});
-            this.dataGridView_EmployeeWorksFor.Location = new System.Drawing.Point(95, 43);
+            this.dataGridView_EmployeeWorksFor.Location = new System.Drawing.Point(89, 43);
             this.dataGridView_EmployeeWorksFor.Name = "dataGridView_EmployeeWorksFor";
             this.dataGridView_EmployeeWorksFor.RowHeadersWidth = 43;
             this.dataGridView_EmployeeWorksFor.Size = new System.Drawing.Size(301, 491);
@@ -2052,6 +2086,7 @@ namespace Lab05_CompanyManager
             // 
             // tabPage_Supervisor
             // 
+            this.tabPage_Supervisor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage_Supervisor.Controls.Add(this.label_ND4);
             this.tabPage_Supervisor.Controls.Add(this.label2);
             this.tabPage_Supervisor.Controls.Add(this.label_ND3);
@@ -2069,13 +2104,12 @@ namespace Lab05_CompanyManager
             this.tabPage_Supervisor.Size = new System.Drawing.Size(1158, 534);
             this.tabPage_Supervisor.TabIndex = 10;
             this.tabPage_Supervisor.Text = "Supervisor";
-            this.tabPage_Supervisor.UseVisualStyleBackColor = true;
             // 
             // label_ND4
             // 
             this.label_ND4.AutoSize = true;
             this.label_ND4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ND4.Location = new System.Drawing.Point(405, 100);
+            this.label_ND4.Location = new System.Drawing.Point(387, 100);
             this.label_ND4.Name = "label_ND4";
             this.label_ND4.Size = new System.Drawing.Size(358, 17);
             this.label_ND4.TabIndex = 34;
@@ -2093,7 +2127,7 @@ namespace Lab05_CompanyManager
             // 
             this.label_ND3.AutoSize = true;
             this.label_ND3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ND3.Location = new System.Drawing.Point(405, 75);
+            this.label_ND3.Location = new System.Drawing.Point(387, 75);
             this.label_ND3.Name = "label_ND3";
             this.label_ND3.Size = new System.Drawing.Size(347, 17);
             this.label_ND3.TabIndex = 32;
@@ -2101,13 +2135,15 @@ namespace Lab05_CompanyManager
             // 
             // button_SaveSupervisor
             // 
-            this.button_SaveSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SaveSupervisor.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button_SaveSupervisor.Font = new System.Drawing.Font("Verdana", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.button_SaveSupervisor.ForeColor = System.Drawing.Color.White;
             this.button_SaveSupervisor.Location = new System.Drawing.Point(525, 168);
             this.button_SaveSupervisor.Name = "button_SaveSupervisor";
             this.button_SaveSupervisor.Size = new System.Drawing.Size(75, 32);
             this.button_SaveSupervisor.TabIndex = 31;
             this.button_SaveSupervisor.Text = "Save";
-            this.button_SaveSupervisor.UseVisualStyleBackColor = true;
+            this.button_SaveSupervisor.UseVisualStyleBackColor = false;
             this.button_SaveSupervisor.Click += new System.EventHandler(this.button_SaveSupervisor_Click);
             // 
             // label_SupervisorSupervisor
@@ -2131,7 +2167,7 @@ namespace Lab05_CompanyManager
             // label_EmployeeSupervisor
             // 
             this.label_EmployeeSupervisor.AutoSize = true;
-            this.label_EmployeeSupervisor.Location = new System.Drawing.Point(339, 36);
+            this.label_EmployeeSupervisor.Location = new System.Drawing.Point(331, 36);
             this.label_EmployeeSupervisor.Name = "label_EmployeeSupervisor";
             this.label_EmployeeSupervisor.Size = new System.Drawing.Size(62, 15);
             this.label_EmployeeSupervisor.TabIndex = 28;
@@ -2197,7 +2233,7 @@ namespace Lab05_CompanyManager
             this.ssnEmployeeSupervisor,
             this.fnameEmployeeSupervisor,
             this.lnameEmployeeSupervisor});
-            this.dataGridView_EmployeeSupervisor.Location = new System.Drawing.Point(96, 52);
+            this.dataGridView_EmployeeSupervisor.Location = new System.Drawing.Point(88, 52);
             this.dataGridView_EmployeeSupervisor.Name = "dataGridView_EmployeeSupervisor";
             this.dataGridView_EmployeeSupervisor.RowHeadersWidth = 43;
             this.dataGridView_EmployeeSupervisor.Size = new System.Drawing.Size(296, 482);
@@ -2285,7 +2321,7 @@ namespace Lab05_CompanyManager
             this.dependentsEmployee_CTV1,
             this.supervisorEmployee_CTV1,
             this.superviseesEmployee_CTV1});
-            this.dataGridView_CauTruyVan1.Location = new System.Drawing.Point(0, 35);
+            this.dataGridView_CauTruyVan1.Location = new System.Drawing.Point(0, 53);
             this.dataGridView_CauTruyVan1.Name = "dataGridView_CauTruyVan1";
             this.dataGridView_CauTruyVan1.RowHeadersWidth = 43;
             this.dataGridView_CauTruyVan1.Size = new System.Drawing.Size(1158, 499);
@@ -2393,11 +2429,13 @@ namespace Lab05_CompanyManager
             // 
             this.label_CauTruyVan1.AutoSize = true;
             this.label_CauTruyVan1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CauTruyVan1.Location = new System.Drawing.Point(8, 7);
+            this.label_CauTruyVan1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_CauTruyVan1.Location = new System.Drawing.Point(3, 13);
             this.label_CauTruyVan1.Name = "label_CauTruyVan1";
             this.label_CauTruyVan1.Size = new System.Drawing.Size(557, 29);
             this.label_CauTruyVan1.TabIndex = 2;
             this.label_CauTruyVan1.Text = "Tìm tất cả những người làm thuê có giới tính là nam.";
+            this.label_CauTruyVan1.Click += new System.EventHandler(this.label_CauTruyVan1_Click);
             // 
             // tabPage_CauTruyVan2
             // 
@@ -2428,11 +2466,12 @@ namespace Lab05_CompanyManager
             this.dependentsEmployee_CTV2,
             this.supervisorEMployee_CTV2,
             this.superviseesEmployee_CTV2});
-            this.dataGridView_CauTruyVan2.Location = new System.Drawing.Point(0, 39);
+            this.dataGridView_CauTruyVan2.Location = new System.Drawing.Point(0, 51);
             this.dataGridView_CauTruyVan2.Name = "dataGridView_CauTruyVan2";
             this.dataGridView_CauTruyVan2.RowHeadersWidth = 43;
-            this.dataGridView_CauTruyVan2.Size = new System.Drawing.Size(1158, 499);
+            this.dataGridView_CauTruyVan2.Size = new System.Drawing.Size(1158, 506);
             this.dataGridView_CauTruyVan2.TabIndex = 4;
+            this.dataGridView_CauTruyVan2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CauTruyVan2_CellContentClick);
             // 
             // ssnEmployee_CTV2
             // 
@@ -2536,7 +2575,8 @@ namespace Lab05_CompanyManager
             // 
             this.label_CauTruyVan2.AutoSize = true;
             this.label_CauTruyVan2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CauTruyVan2.Location = new System.Drawing.Point(8, 9);
+            this.label_CauTruyVan2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_CauTruyVan2.Location = new System.Drawing.Point(3, 12);
             this.label_CauTruyVan2.Name = "label_CauTruyVan2";
             this.label_CauTruyVan2.Size = new System.Drawing.Size(883, 29);
             this.label_CauTruyVan2.TabIndex = 3;
@@ -2571,7 +2611,7 @@ namespace Lab05_CompanyManager
             this.dependentsEmployee_CTV3,
             this.supervisorEmployee_CTV3,
             this.superviseesEmployee_CTV3});
-            this.dataGridView_CauTruyVan3.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView_CauTruyVan3.Location = new System.Drawing.Point(0, 49);
             this.dataGridView_CauTruyVan3.Name = "dataGridView_CauTruyVan3";
             this.dataGridView_CauTruyVan3.RowHeadersWidth = 43;
             this.dataGridView_CauTruyVan3.Size = new System.Drawing.Size(1158, 499);
@@ -2679,12 +2719,13 @@ namespace Lab05_CompanyManager
             // 
             this.label_CauTruyVan3.AutoSize = true;
             this.label_CauTruyVan3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CauTruyVan3.Location = new System.Drawing.Point(8, 3);
+            this.label_CauTruyVan3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_CauTruyVan3.Location = new System.Drawing.Point(3, 13);
             this.label_CauTruyVan3.Name = "label_CauTruyVan3";
-            this.label_CauTruyVan3.Size = new System.Drawing.Size(1084, 29);
+            this.label_CauTruyVan3.Size = new System.Drawing.Size(1090, 29);
             this.label_CauTruyVan3.TabIndex = 5;
             this.label_CauTruyVan3.Text = "Tìm tất cả những người làm thuê đã làm cho dự án có tên chứa chữ “A” và có thời g" +
-    "ian làm việc là <10h";
+    "ian làm việc là <10h.";
             // 
             // tabPage_CauTruyVan4
             // 
@@ -2706,7 +2747,7 @@ namespace Lab05_CompanyManager
             this.locationProject_CTV4,
             this.controlledbyProject_CTV4,
             this.worksonProject_CTV4});
-            this.dataGridView_CauTruyVan4.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView_CauTruyVan4.Location = new System.Drawing.Point(0, 50);
             this.dataGridView_CauTruyVan4.Name = "dataGridView_CauTruyVan4";
             this.dataGridView_CauTruyVan4.RowHeadersWidth = 43;
             this.dataGridView_CauTruyVan4.Size = new System.Drawing.Size(1158, 499);
@@ -2746,19 +2787,21 @@ namespace Lab05_CompanyManager
             // 
             this.label_CauTruyVan4.AutoSize = true;
             this.label_CauTruyVan4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CauTruyVan4.Location = new System.Drawing.Point(8, 3);
+            this.label_CauTruyVan4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_CauTruyVan4.Location = new System.Drawing.Point(3, 13);
             this.label_CauTruyVan4.Name = "label_CauTruyVan4";
-            this.label_CauTruyVan4.Size = new System.Drawing.Size(785, 29);
+            this.label_CauTruyVan4.Size = new System.Drawing.Size(791, 29);
             this.label_CauTruyVan4.TabIndex = 7;
-            this.label_CauTruyVan4.Text = "Tìm tất cả các công việc được thực hiện bởi dự án có địa điểm là Houston";
+            this.label_CauTruyVan4.Text = "Tìm tất cả các công việc được thực hiện bởi dự án có địa điểm là Houston.";
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label_TrungInfo);
+            this.tabPage1.Controls.Add(this.label_SaInfo);
+            this.tabPage1.Controls.Add(this.label_SangInfo);
+            this.tabPage1.Controls.Add(this.label_ThangInfo);
+            this.tabPage1.Controls.Add(this.label_VyInfo);
+            this.tabPage1.Controls.Add(this.label_TeamName);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -2767,60 +2810,93 @@ namespace Lab05_CompanyManager
             this.tabPage1.Text = "Thông tin nhóm Illumiate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // label_TrungInfo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.09901F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(295, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NHÓM ILLUMINATE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label_TrungInfo.AutoSize = true;
+            this.label_TrungInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label_TrungInfo.Font = new System.Drawing.Font("Times New Roman", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_TrungInfo.ForeColor = System.Drawing.Color.White;
+            this.label_TrungInfo.Location = new System.Drawing.Point(442, 275);
+            this.label_TrungInfo.Name = "label_TrungInfo";
+            this.label_TrungInfo.Size = new System.Drawing.Size(288, 23);
+            this.label_TrungInfo.TabIndex = 5;
+            this.label_TrungInfo.Text = "Nguyễn Tiến Trung - 4501104262";
+            this.label_TrungInfo.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label3
+            // label_SaInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(319, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Trần Quốc Thắng - 4501104220";
+            this.label_SaInfo.AutoSize = true;
+            this.label_SaInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label_SaInfo.Font = new System.Drawing.Font("Times New Roman", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_SaInfo.ForeColor = System.Drawing.Color.White;
+            this.label_SaInfo.Location = new System.Drawing.Point(442, 243);
+            this.label_SaInfo.Name = "label_SaInfo";
+            this.label_SaInfo.Size = new System.Drawing.Size(297, 23);
+            this.label_SaInfo.TabIndex = 4;
+            this.label_SaInfo.Text = "Trần Sĩ Nguyên Sa - 42.01.751.191";
+            this.label_SaInfo.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label4
+            // label_SangInfo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Trần Quốc Thắng - 4501104220";
+            this.label_SangInfo.AutoSize = true;
+            this.label_SangInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label_SangInfo.Font = new System.Drawing.Font("Times New Roman", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_SangInfo.ForeColor = System.Drawing.Color.White;
+            this.label_SangInfo.Location = new System.Drawing.Point(442, 178);
+            this.label_SangInfo.Name = "label_SangInfo";
+            this.label_SangInfo.Size = new System.Drawing.Size(323, 23);
+            this.label_SangInfo.TabIndex = 3;
+            this.label_SangInfo.Text = "Đặng Phan Hoàng Sang - 4501104197";
+            this.label_SangInfo.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label5
+            // label_ThangInfo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(319, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Trần Quốc Thắng - 4501104220";
+            this.label_ThangInfo.AutoSize = true;
+            this.label_ThangInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label_ThangInfo.Font = new System.Drawing.Font("Times New Roman", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_ThangInfo.ForeColor = System.Drawing.Color.White;
+            this.label_ThangInfo.Location = new System.Drawing.Point(442, 136);
+            this.label_ThangInfo.Name = "label_ThangInfo";
+            this.label_ThangInfo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label_ThangInfo.Size = new System.Drawing.Size(274, 33);
+            this.label_ThangInfo.TabIndex = 2;
+            this.label_ThangInfo.Text = "Trần Quốc Thắng - 4501104220";
+            this.label_ThangInfo.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label6
+            // label_VyInfo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(319, 248);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 15);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Trần Quốc Thắng - 4501104220";
+            this.label_VyInfo.AutoSize = true;
+            this.label_VyInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label_VyInfo.Font = new System.Drawing.Font("Times New Roman", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_VyInfo.ForeColor = System.Drawing.Color.White;
+            this.label_VyInfo.Location = new System.Drawing.Point(442, 211);
+            this.label_VyInfo.Name = "label_VyInfo";
+            this.label_VyInfo.Size = new System.Drawing.Size(249, 23);
+            this.label_VyInfo.TabIndex = 1;
+            this.label_VyInfo.Text = "Chan Hồng Vỹ - 4501104284";
+            this.label_VyInfo.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label_TeamName
+            // 
+            this.label_TeamName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_TeamName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label_TeamName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_TeamName.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.09901F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_TeamName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_TeamName.Location = new System.Drawing.Point(3, 3);
+            this.label_TeamName.Name = "label_TeamName";
+            this.label_TeamName.Padding = new System.Windows.Forms.Padding(0, 40, 0, 0);
+            this.label_TeamName.Size = new System.Drawing.Size(1152, 528);
+            this.label_TeamName.TabIndex = 0;
+            this.label_TeamName.Text = "NHÓM ILLUMINATE";
+            this.label_TeamName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_TeamName.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 560);
+            this.ClientSize = new System.Drawing.Size(1167, 560);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -3134,10 +3210,11 @@ namespace Lab05_CompanyManager
         private System.Windows.Forms.DataGridViewTextBoxColumn supervisor_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn supervisees_Employee;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_SangInfo;
+        private System.Windows.Forms.Label label_ThangInfo;
+        private System.Windows.Forms.Label label_VyInfo;
+        private System.Windows.Forms.Label label_TeamName;
+        private System.Windows.Forms.Label label_SaInfo;
+        private System.Windows.Forms.Label label_TrungInfo;
     }
 }

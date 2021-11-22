@@ -10,20 +10,20 @@ namespace Lab05_CompanyManager
 {
     public class Database
     {
-        public string DbFileName { get; set; } // Tên file database
+        public string DbFileName { get; set; } // File name database
         public IObjectContainer DB;
         public void CloseDatabase()
         {
-            DB.Close();
-        } // Đóng database
+            DB.Close(); // Close database file
+        } 
         public Database()
         {
             DbFileName = "database.yap";
-            DB = Db4oEmbedded.OpenFile(DbFileName); // Mở file database
+            DB = Db4oEmbedded.OpenFile(DbFileName); // Open database file
         }
         public void CreateDatabase()
-        {
-            // Đọc dữ liệu từ file .txt sau đó nạp vào database
+        {          
+            // Reading txt file and inserting into database
             CreateEmployee("data_Employee.txt"); 
             CreateDependents("data_Dependent.txt");
             CreateProject("data_Project.txt");
