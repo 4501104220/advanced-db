@@ -439,7 +439,7 @@ namespace Lab05_CompanyManager
                         else supervisees += ", " + e.Supervisees[j].FName + " " + e.Supervisees[j].LName;
                     }
                 }
-                dataGridView_CauTruyVan1.Rows.Add(ssn, fname, lname, minit, gender, address, birthdate, salary, worksfor, manager, workson, dependent, supervisor, supervisees);
+                dataGridView_CauTruyVan2.Rows.Add(ssn, fname, lname, minit, gender, address, birthdate, salary, worksfor, manager, workson, dependent, supervisor, supervisees);
             }
 
             // Truy vấn 3: Tìm tất cả những người làm thuê đã làm cho dự án có tên chứa chữ “A” và có thời gian làm việc là < 10h
@@ -2455,6 +2455,11 @@ namespace Lab05_CompanyManager
 
                 LoadData();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

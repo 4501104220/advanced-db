@@ -53,6 +53,20 @@ namespace Lab05_CompanyManager
             this.label_FNameEmployee = new System.Windows.Forms.Label();
             this.label_SsnEmployee = new System.Windows.Forms.Label();
             this.dataGridView_Employee = new System.Windows.Forms.DataGridView();
+            this.ssn_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fname_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lname_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minit_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdate_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.worksfor_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manager_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workson_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dependents_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supervisor_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supervisees_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage_Dependent = new System.Windows.Forms.TabPage();
             this.comboBox_GenderDependent = new System.Windows.Forms.ComboBox();
             this.textBox_SsnDependentOfOld = new System.Windows.Forms.TextBox();
@@ -271,20 +285,12 @@ namespace Lab05_CompanyManager
             this.controlledbyProject_CTV4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.worksonProject_CTV4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_CauTruyVan4 = new System.Windows.Forms.Label();
-            this.ssn_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fname_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lname_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minit_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdate_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salary_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.worksfor_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manager_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workson_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dependents_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supervisor_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supervisees_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_Employee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employee)).BeginInit();
@@ -317,6 +323,7 @@ namespace Lab05_CompanyManager
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CauTruyVan3)).BeginInit();
             this.tabPage_CauTruyVan4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CauTruyVan4)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -333,6 +340,7 @@ namespace Lab05_CompanyManager
             this.tabControl1.Controls.Add(this.tabPage_CauTruyVan2);
             this.tabControl1.Controls.Add(this.tabPage_CauTruyVan3);
             this.tabControl1.Controls.Add(this.tabPage_CauTruyVan4);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(0, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -576,6 +584,119 @@ namespace Lab05_CompanyManager
             this.dataGridView_Employee.Size = new System.Drawing.Size(895, 534);
             this.dataGridView_Employee.TabIndex = 0;
             this.dataGridView_Employee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Employee_CellClick);
+            // 
+            // ssn_Employee
+            // 
+            this.ssn_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ssn_Employee.DataPropertyName = "Ssn";
+            this.ssn_Employee.HeaderText = "Ssn";
+            this.ssn_Employee.Name = "ssn_Employee";
+            this.ssn_Employee.Width = 53;
+            // 
+            // fname_Employee
+            // 
+            this.fname_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fname_Employee.DataPropertyName = "FName";
+            this.fname_Employee.HeaderText = "First name";
+            this.fname_Employee.Name = "fname_Employee";
+            this.fname_Employee.Width = 90;
+            // 
+            // lname_Employee
+            // 
+            this.lname_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.lname_Employee.DataPropertyName = "LName";
+            this.lname_Employee.HeaderText = "Last name";
+            this.lname_Employee.Name = "lname_Employee";
+            this.lname_Employee.Width = 90;
+            // 
+            // gender_Employee
+            // 
+            this.gender_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gender_Employee.DataPropertyName = "Gender";
+            this.gender_Employee.HeaderText = "Gender";
+            this.gender_Employee.Name = "gender_Employee";
+            this.gender_Employee.Width = 73;
+            // 
+            // minit_Employee
+            // 
+            this.minit_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.minit_Employee.DataPropertyName = "MInit";
+            this.minit_Employee.HeaderText = "MInit";
+            this.minit_Employee.Name = "minit_Employee";
+            this.minit_Employee.Width = 59;
+            // 
+            // address_Employee
+            // 
+            this.address_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.address_Employee.DataPropertyName = "Address";
+            this.address_Employee.HeaderText = "Address";
+            this.address_Employee.Name = "address_Employee";
+            this.address_Employee.Width = 76;
+            // 
+            // birthdate_Employee
+            // 
+            this.birthdate_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.birthdate_Employee.DataPropertyName = "BirthDate";
+            this.birthdate_Employee.HeaderText = "BirthDate";
+            this.birthdate_Employee.Name = "birthdate_Employee";
+            this.birthdate_Employee.Width = 83;
+            // 
+            // salary_Employee
+            // 
+            this.salary_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.salary_Employee.DataPropertyName = "Salary";
+            this.salary_Employee.HeaderText = "Salary";
+            this.salary_Employee.Name = "salary_Employee";
+            this.salary_Employee.Width = 66;
+            // 
+            // worksfor_Employee
+            // 
+            this.worksfor_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.worksfor_Employee.DataPropertyName = "WorksFor";
+            this.worksfor_Employee.HeaderText = "WorksFor";
+            this.worksfor_Employee.Name = "worksfor_Employee";
+            this.worksfor_Employee.Width = 84;
+            // 
+            // manager_Employee
+            // 
+            this.manager_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.manager_Employee.DataPropertyName = "Manager";
+            this.manager_Employee.HeaderText = "Manager";
+            this.manager_Employee.Name = "manager_Employee";
+            this.manager_Employee.Width = 82;
+            // 
+            // workson_Employee
+            // 
+            this.workson_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.workson_Employee.DataPropertyName = "WorksOn";
+            this.workson_Employee.HeaderText = "WorksOn";
+            this.workson_Employee.MinimumWidth = 80;
+            this.workson_Employee.Name = "workson_Employee";
+            this.workson_Employee.Width = 82;
+            // 
+            // dependents_Employee
+            // 
+            this.dependents_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dependents_Employee.DataPropertyName = "Dependents";
+            this.dependents_Employee.HeaderText = "Dependents";
+            this.dependents_Employee.Name = "dependents_Employee";
+            this.dependents_Employee.Width = 99;
+            // 
+            // supervisor_Employee
+            // 
+            this.supervisor_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.supervisor_Employee.DataPropertyName = "Supervisor";
+            this.supervisor_Employee.HeaderText = "Supervisor";
+            this.supervisor_Employee.Name = "supervisor_Employee";
+            this.supervisor_Employee.Width = 90;
+            // 
+            // supervisees_Employee
+            // 
+            this.supervisees_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.supervisees_Employee.DataPropertyName = "supervisees";
+            this.supervisees_Employee.HeaderText = "Supervisees";
+            this.supervisees_Employee.Name = "supervisees_Employee";
+            this.supervisees_Employee.Width = 99;
             // 
             // tabPage_Dependent
             // 
@@ -1166,7 +1287,7 @@ namespace Lab05_CompanyManager
             this.workson_Project.DataPropertyName = "WorksOn";
             this.workson_Project.HeaderText = "WorksOn";
             this.workson_Project.Name = "workson_Project";
-            this.workson_Project.Width = 102;
+            this.workson_Project.Width = 82;
             // 
             // tabPage_Department
             // 
@@ -2245,7 +2366,7 @@ namespace Lab05_CompanyManager
             this.worksonEmployee_CTV1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.worksonEmployee_CTV1.HeaderText = "WorksOn";
             this.worksonEmployee_CTV1.Name = "worksonEmployee_CTV1";
-            this.worksonEmployee_CTV1.Width = 102;
+            this.worksonEmployee_CTV1.Width = 82;
             // 
             // dependentsEmployee_CTV1
             // 
@@ -2388,7 +2509,7 @@ namespace Lab05_CompanyManager
             this.worksonEmployee_CTV2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.worksonEmployee_CTV2.HeaderText = "WorksOn";
             this.worksonEmployee_CTV2.Name = "worksonEmployee_CTV2";
-            this.worksonEmployee_CTV2.Width = 102;
+            this.worksonEmployee_CTV2.Width = 82;
             // 
             // dependentsEmployee_CTV2
             // 
@@ -2531,7 +2652,7 @@ namespace Lab05_CompanyManager
             this.worksonEmployee_CTV3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.worksonEmployee_CTV3.HeaderText = "WorksOn";
             this.worksonEmployee_CTV3.Name = "worksonEmployee_CTV3";
-            this.worksonEmployee_CTV3.Width = 102;
+            this.worksonEmployee_CTV3.Width = 82;
             // 
             // dependentsEmployee_CTV3
             // 
@@ -2627,122 +2748,73 @@ namespace Lab05_CompanyManager
             this.label_CauTruyVan4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CauTruyVan4.Location = new System.Drawing.Point(8, 3);
             this.label_CauTruyVan4.Name = "label_CauTruyVan4";
-            this.label_CauTruyVan4.Size = new System.Drawing.Size(772, 29);
+            this.label_CauTruyVan4.Size = new System.Drawing.Size(785, 29);
             this.label_CauTruyVan4.TabIndex = 7;
             this.label_CauTruyVan4.Text = "Tìm tất cả các công việc được thực hiện bởi dự án có địa điểm là Houston";
             // 
-            // ssn_Employee
+            // tabPage1
             // 
-            this.ssn_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ssn_Employee.DataPropertyName = "Ssn";
-            this.ssn_Employee.HeaderText = "Ssn";
-            this.ssn_Employee.Name = "ssn_Employee";
-            this.ssn_Employee.Width = 53;
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1158, 534);
+            this.tabPage1.TabIndex = 11;
+            this.tabPage1.Text = "Thông tin nhóm Illumiate";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // fname_Employee
+            // label1
             // 
-            this.fname_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fname_Employee.DataPropertyName = "FName";
-            this.fname_Employee.HeaderText = "First name";
-            this.fname_Employee.Name = "fname_Employee";
-            this.fname_Employee.Width = 90;
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.09901F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(295, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(329, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NHÓM ILLUMINATE";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lname_Employee
+            // label3
             // 
-            this.lname_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.lname_Employee.DataPropertyName = "LName";
-            this.lname_Employee.HeaderText = "Last name";
-            this.lname_Employee.Name = "lname_Employee";
-            this.lname_Employee.Width = 90;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(319, 211);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(182, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Trần Quốc Thắng - 4501104220";
             // 
-            // gender_Employee
+            // label4
             // 
-            this.gender_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.gender_Employee.DataPropertyName = "Gender";
-            this.gender_Employee.HeaderText = "Gender";
-            this.gender_Employee.Name = "gender_Employee";
-            this.gender_Employee.Width = 73;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(319, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Trần Quốc Thắng - 4501104220";
             // 
-            // minit_Employee
+            // label5
             // 
-            this.minit_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.minit_Employee.DataPropertyName = "MInit";
-            this.minit_Employee.HeaderText = "MInit";
-            this.minit_Employee.Name = "minit_Employee";
-            this.minit_Employee.Width = 59;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(319, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 15);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Trần Quốc Thắng - 4501104220";
             // 
-            // address_Employee
+            // label6
             // 
-            this.address_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.address_Employee.DataPropertyName = "Address";
-            this.address_Employee.HeaderText = "Address";
-            this.address_Employee.Name = "address_Employee";
-            this.address_Employee.Width = 76;
-            // 
-            // birthdate_Employee
-            // 
-            this.birthdate_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.birthdate_Employee.DataPropertyName = "BirthDate";
-            this.birthdate_Employee.HeaderText = "BirthDate";
-            this.birthdate_Employee.Name = "birthdate_Employee";
-            this.birthdate_Employee.Width = 83;
-            // 
-            // salary_Employee
-            // 
-            this.salary_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.salary_Employee.DataPropertyName = "Salary";
-            this.salary_Employee.HeaderText = "Salary";
-            this.salary_Employee.Name = "salary_Employee";
-            this.salary_Employee.Width = 66;
-            // 
-            // worksfor_Employee
-            // 
-            this.worksfor_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.worksfor_Employee.DataPropertyName = "WorksFor";
-            this.worksfor_Employee.HeaderText = "WorksFor";
-            this.worksfor_Employee.Name = "worksfor_Employee";
-            this.worksfor_Employee.Width = 84;
-            // 
-            // manager_Employee
-            // 
-            this.manager_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.manager_Employee.DataPropertyName = "Manager";
-            this.manager_Employee.HeaderText = "Manager";
-            this.manager_Employee.Name = "manager_Employee";
-            this.manager_Employee.Width = 82;
-            // 
-            // workson_Employee
-            // 
-            this.workson_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.workson_Employee.DataPropertyName = "WorksOn";
-            this.workson_Employee.HeaderText = "WorksOn";
-            this.workson_Employee.MinimumWidth = 80;
-            this.workson_Employee.Name = "workson_Employee";
-            this.workson_Employee.Width = 102;
-            // 
-            // dependents_Employee
-            // 
-            this.dependents_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dependents_Employee.DataPropertyName = "Dependents";
-            this.dependents_Employee.HeaderText = "Dependents";
-            this.dependents_Employee.Name = "dependents_Employee";
-            this.dependents_Employee.Width = 99;
-            // 
-            // supervisor_Employee
-            // 
-            this.supervisor_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.supervisor_Employee.DataPropertyName = "Supervisor";
-            this.supervisor_Employee.HeaderText = "Supervisor";
-            this.supervisor_Employee.Name = "supervisor_Employee";
-            this.supervisor_Employee.Width = 90;
-            // 
-            // supervisees_Employee
-            // 
-            this.supervisees_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.supervisees_Employee.DataPropertyName = "supervisees";
-            this.supervisees_Employee.HeaderText = "Supervisees";
-            this.supervisees_Employee.Name = "supervisees_Employee";
-            this.supervisees_Employee.Width = 99;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(319, 248);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 15);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Trần Quốc Thắng - 4501104220";
             // 
             // frmMain
             // 
@@ -2753,7 +2825,7 @@ namespace Lab05_CompanyManager
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "Lab05-CompanyManager | Nhóm Illuminate";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Employee.ResumeLayout(false);
@@ -2798,6 +2870,8 @@ namespace Lab05_CompanyManager
             this.tabPage_CauTruyVan4.ResumeLayout(false);
             this.tabPage_CauTruyVan4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CauTruyVan4)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3059,5 +3133,11 @@ namespace Lab05_CompanyManager
         private System.Windows.Forms.DataGridViewTextBoxColumn dependents_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn supervisor_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn supervisees_Employee;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
     }
 }
