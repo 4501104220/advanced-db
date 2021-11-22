@@ -391,12 +391,13 @@ namespace Lab05_CompanyManager
             // 
             // button_Reset_Employee
             // 
+            this.button_Reset_Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Reset_Employee.Location = new System.Drawing.Point(11, 502);
             this.button_Reset_Employee.Name = "button_Reset_Employee";
             this.button_Reset_Employee.Size = new System.Drawing.Size(48, 23);
             this.button_Reset_Employee.TabIndex = 21;
             this.button_Reset_Employee.Text = "Reset";
-            this.button_Reset_Employee.UseVisualStyleBackColor = true;
+            this.button_Reset_Employee.UseVisualStyleBackColor = false;
             this.button_Reset_Employee.Click += new System.EventHandler(this.button_Reset_Employee_Click);
             // 
             // button_DeleteEmployee
@@ -873,12 +874,13 @@ namespace Lab05_CompanyManager
             // 
             // button_Reset_Dependent
             // 
+            this.button_Reset_Dependent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Reset_Dependent.Location = new System.Drawing.Point(11, 502);
             this.button_Reset_Dependent.Name = "button_Reset_Dependent";
             this.button_Reset_Dependent.Size = new System.Drawing.Size(48, 23);
             this.button_Reset_Dependent.TabIndex = 22;
             this.button_Reset_Dependent.Text = "Reset";
-            this.button_Reset_Dependent.UseVisualStyleBackColor = true;
+            this.button_Reset_Dependent.UseVisualStyleBackColor = false;
             this.button_Reset_Dependent.Click += new System.EventHandler(this.button_Reset_Dependent_Click);
             // 
             // textBox_SsnDependentOf
@@ -1162,12 +1164,13 @@ namespace Lab05_CompanyManager
             // 
             // button_Reset_Project
             // 
+            this.button_Reset_Project.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Reset_Project.Location = new System.Drawing.Point(11, 502);
             this.button_Reset_Project.Name = "button_Reset_Project";
             this.button_Reset_Project.Size = new System.Drawing.Size(48, 23);
             this.button_Reset_Project.TabIndex = 23;
             this.button_Reset_Project.Text = "Reset";
-            this.button_Reset_Project.UseVisualStyleBackColor = true;
+            this.button_Reset_Project.UseVisualStyleBackColor = false;
             this.button_Reset_Project.Click += new System.EventHandler(this.button_Reset_Project_Click);
             // 
             // button_DeleteProject
@@ -1438,12 +1441,13 @@ namespace Lab05_CompanyManager
             // 
             // button_Reset_Department
             // 
+            this.button_Reset_Department.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Reset_Department.Location = new System.Drawing.Point(11, 502);
             this.button_Reset_Department.Name = "button_Reset_Department";
             this.button_Reset_Department.Size = new System.Drawing.Size(48, 23);
             this.button_Reset_Department.TabIndex = 23;
             this.button_Reset_Department.Text = "Reset";
-            this.button_Reset_Department.UseVisualStyleBackColor = true;
+            this.button_Reset_Department.UseVisualStyleBackColor = false;
             this.button_Reset_Department.Click += new System.EventHandler(this.button_Reset_Department_Click);
             // 
             // button_DeleteDepartment
@@ -1790,12 +1794,13 @@ namespace Lab05_CompanyManager
             // 
             // button_Reset_WorksOn
             // 
+            this.button_Reset_WorksOn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Reset_WorksOn.Location = new System.Drawing.Point(8, 502);
             this.button_Reset_WorksOn.Name = "button_Reset_WorksOn";
             this.button_Reset_WorksOn.Size = new System.Drawing.Size(48, 23);
             this.button_Reset_WorksOn.TabIndex = 24;
             this.button_Reset_WorksOn.Text = "Reset";
-            this.button_Reset_WorksOn.UseVisualStyleBackColor = true;
+            this.button_Reset_WorksOn.UseVisualStyleBackColor = false;
             this.button_Reset_WorksOn.Click += new System.EventHandler(this.button_Reset_WorksOn_Click);
             // 
             // dataGridView_EmployeeWorksOn
@@ -1947,12 +1952,13 @@ namespace Lab05_CompanyManager
             // 
             // button_Reset_WorksFor
             // 
+            this.button_Reset_WorksFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Reset_WorksFor.Location = new System.Drawing.Point(8, 502);
             this.button_Reset_WorksFor.Name = "button_Reset_WorksFor";
             this.button_Reset_WorksFor.Size = new System.Drawing.Size(48, 23);
             this.button_Reset_WorksFor.TabIndex = 25;
             this.button_Reset_WorksFor.Text = "Reset";
-            this.button_Reset_WorksFor.UseVisualStyleBackColor = true;
+            this.button_Reset_WorksFor.UseVisualStyleBackColor = false;
             this.button_Reset_WorksFor.Click += new System.EventHandler(this.button_Reset_WorksFor_Click);
             // 
             // textBox_NumberDepartmentWorksFor
@@ -2185,12 +2191,13 @@ namespace Lab05_CompanyManager
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Location = new System.Drawing.Point(8, 502);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 23);
             this.button1.TabIndex = 26;
             this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView_SuperviseesSupervisor

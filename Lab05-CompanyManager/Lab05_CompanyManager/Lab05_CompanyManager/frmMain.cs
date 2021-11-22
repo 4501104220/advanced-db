@@ -12,14 +12,14 @@ namespace Lab05_CompanyManager
         {
             InitializeComponent();
         }
-        Database database = new Database(); // Khởi tạo database
+        Database database = new Database(); // Creating database file
         private void frmMain_Load(object sender, EventArgs e)
         {
             LoadData();
         }
         public void LoadData()
         {
-            database.CreateDatabase(); // Mở database
+            database.CreateDatabase(); // Open database file
 
             // Clear dataGridView
             dataGridView_Employee.Rows.Clear();
@@ -65,6 +65,7 @@ namespace Lab05_CompanyManager
             comboBox_GenderDependent.Items.Add("F");
             textBox_BirthDateDependent.Clear();
             comboBox_RelationshipDependent.Items.Clear();
+
             string[] relationships =
             {
                 "Father",
@@ -76,8 +77,10 @@ namespace Lab05_CompanyManager
                 "Brother",
                 "Sister",
                 "Uncle",
-                "Aunt"
+                "Aunt",
+                "Spouse"
             };
+
             comboBox_RelationshipDependent.Items.AddRange(relationships);
             comboBox_RelationshipDependent.Text = "";
             textBox_SsnDependentOf.Clear();
@@ -123,65 +126,74 @@ namespace Lab05_CompanyManager
             // tab Supervisor
             textBox_SsnSupervisorSupervisor.Clear();
 
-            // Khởi tạo biến list để lưu dữ liệu Employee
+            // Initialize list variable to store Employee data
             List<Employee> list_Employee = new List<Employee>();
-            // Khởi tạo biến list để lưu dữ liệu Dependent
+
+            // Initialize list variable to store Dependent data
             List<Dependent> list_Dependent = new List<Dependent>();
-            // Khởi tạo biến list để lưu dữ liệu Project
+
+            // Initialize list variable to store Project data
             List<Project> list_Project = new List<Project>();
-            // Khởi tạo biến list để lưu dữ liệu Department
+
+            // Initialize list variable to store Department data
             List<Department> list_Department = new List<Department>();
-            // Khởi tạo biến list để lưu dữ liệu WorksOn
+
+            // Initialize list variable to store WorksOn data
             List<WorksOn> list_WorksOn = new List<WorksOn>();
 
             IObjectSet result = null;
 
-            // Lấy dữ liệu Employee từ database
+            // Get Employee data from database
             result = database.result_Employee();
-            // Đưa từng dữ liệu Employee vào trong list_Employee
+
+            // Save each Employee data to list_Employee
             for (int i = 0; i < result.Count; ++i)
             {
                 Employee employee = (Employee)result[i];
                 list_Employee.Add(employee);
             }
 
-            // Lấy dữ liệu Dependent từ database
+            // Get each Dependent data from database
             result = database.result_Dependent();
-            // Đưa từng dữ liệu Dependent vào trong list_Dependent
+
+            // Save each Dependent data to list_Dependent
             for (int i = 0; i < result.Count; ++i)
             {
                 Dependent dependent = (Dependent)result[i];
                 list_Dependent.Add(dependent);
             }
 
-            // Lấy dữ liệu Project từ database
+            // Get Project data from database
             result = database.result_Project();
-            // Đưa từng dữ liệu Project vào trong list_Project
+
+            // Save each Project data to list_Project
             for (int i = 0; i < result.Count; ++i)
             {
                 Project project = (Project)result[i];
                 list_Project.Add(project);
             }
 
-            // Lấy dữ liệu Department từ database
+            // Get Department data from database
             result = database.result_Department();
-            // Đưa từng dữ liệu Department vào trong list_Department
+
+            // Save each Department data to list_Department
             for (int i = 0; i < result.Count; ++i)
             {
                 Department department = (Department)result[i];
                 list_Department.Add(department);
             }
 
-            // Lấy dữ liệu WorksOn từ database
+            // Get WorksOn data from database
             result = database.result_WorksOn();
-            // Đưa từng dữ liệu WorksOn vào trong list_WorksOn
+
+            // Save each WorksOn data to list_WorksOn
             for (int i = 0; i < result.Count; ++i)
             {
                 WorksOn worksOn = (WorksOn)result[i];
                 list_WorksOn.Add(worksOn);
             }
 
-            // Đưa dữ liệu vào dataGridView
+            // Save data to dataGridView
             for(int i = 0; i < list_Employee.Count; ++i)
             {
                 Employee e = list_Employee[i];
@@ -196,6 +208,7 @@ namespace Lab05_CompanyManager
                 string worksfor = (e.WorksFor == null) ? null : e.WorksFor.DName;
                 string manager = (e.Manager == null) ? null : e.Manager.DName;
                 string workson = null;
+
                 if(e.WorksOn != null && e.WorksOn.Count != 0)
                 {
                     for(int j = 0; j < e.WorksOn.Count; ++j)
@@ -205,7 +218,9 @@ namespace Lab05_CompanyManager
                     }
                     
                 }
+
                 string dependent = null;
+
                 if(e.Dependents != null && e.Dependents.Count != 0)
                 {
                     for (int j = 0; j < e.Dependents.Count; ++j)
@@ -214,8 +229,10 @@ namespace Lab05_CompanyManager
                         else dependent += ", " + e.Dependents[j].Name;
                     }
                 }
+
                 string supervisor = (e.Supervisor == null) ? null : e.Supervisor.FName + " " + e.Supervisor.LName;
                 string supervisees = null;
+
                 if(e.Supervisees != null && e.Supervisees.Count != 0)
                 {
                     for (int j = 0; j < e.Supervisees.Count; ++j)
@@ -224,9 +241,11 @@ namespace Lab05_CompanyManager
                         else supervisees += ", " + e.Supervisees[j].FName + " " + e.Supervisees[j].LName;
                     }
                 }
+
                 dataGridView_Employee.Rows.Add(ssn, fname, lname, gender, minit, address, birthdate, salary, worksfor, manager, workson, dependent, supervisor, supervisees);
                 dataGridView_EmployeeWorksFor.Rows.Add(ssn, fname, lname);
             }
+
             for(int i = 0; i < list_Dependent.Count; ++i)
             {
                 Dependent d = (Dependent)list_Dependent[i];
@@ -238,6 +257,7 @@ namespace Lab05_CompanyManager
 
                 dataGridView_Dependent.Rows.Add(name, gender, birthdate, relationship, dependentof);
             }
+
             for(int i = 0; i < list_Project.Count; ++i)
             {
                 Project p = (Project)list_Project[i];
@@ -246,6 +266,7 @@ namespace Lab05_CompanyManager
                 string location = p.Location;
                 string controlledby = p.ControlledBy.DName;
                 string workson = null;
+
                 if(p.WorksOn != null && p.WorksOn.Count != 0)
                 {
                     for (int j = 0; j < p.WorksOn.Count; ++j)
@@ -258,18 +279,22 @@ namespace Lab05_CompanyManager
                 dataGridView_Project.Rows.Add(number, name, location, controlledby, workson);
                 dataGridView_ProjectWorksOn.Rows.Add(number, name);
             }
+
             for(int i = 0; i < list_Department.Count; ++i)
             {
                 Department d = (Department)list_Department[i];
                 string number = d.DNumber.ToString();
                 string name = d.DName;
                 string locations = null;
+
                 for(int j = 0; j < d.Locations.Count; ++j)
                 {
                     if (j == 0) locations = d.Locations[j];
                     else locations += ", " + d.Locations[j];
                 }
+
                 string employees = null;
+
                 if(d.Employees != null && d.Employees.Count != 0)
                 {
                     for(int j = 0; j < d.Employees.Count; ++j)
@@ -278,8 +303,10 @@ namespace Lab05_CompanyManager
                         else employees += ", " + d.Employees[j].FName + " " + d.Employees[j].LName;
                     }
                 }
+
                 string manager = (d.Manager == null) ? null : d.Manager.FName + " " + d.Manager.LName;
                 string projects = null;
+
                 if(d.Projects != null && d.Projects.Count != 0)
                 {
                     for(int j = 0; j < d.Projects.Count; ++j)
@@ -293,10 +320,12 @@ namespace Lab05_CompanyManager
                 dataGridView_Department.Rows.Add(number, name, locations, employees, manager, projects, mgrstartdate);
                 dataGridView_DepartmentWorksFor.Rows.Add(number, name);
             }
+
             for(int i = 0; i < list_WorksOn.Count; ++i)
             {
                 dataGridView_WorksOn.Rows.Add(list_WorksOn[i].Hours.ToString(), list_WorksOn[i].Employee.FName + " " + list_WorksOn[i].Employee.LName, list_WorksOn[i].Project.PName);
             }
+
             for(int i = 0; i < list_Employee.Count; ++i)
             {
                 Employee e = (Employee)list_Employee[i];
@@ -310,6 +339,7 @@ namespace Lab05_CompanyManager
                 dataGridView_EmployeeSupervisor.Rows.Add(ssn, fname, lname);
                 dataGridView_SupervisorSupervisor.Rows.Add(ssn, fname, lname);
             }
+
             for(int i = 0; i < list_Department.Count; ++i)
             {
                 Department d = (Department)list_Department[i];
@@ -370,13 +400,15 @@ namespace Lab05_CompanyManager
                 dataGridView_CauTruyVan1.Rows.Add(ssn, fname, lname, minit, gender, address, birthdate, salary, worksfor, manager, workson, dependent, supervisor, supervisees);
             }
 
-            // Truy vấn 2: Tìm tất cả những người làm thuê đã làm việc cho ban ngành có tên có chữ T ở đầu
+            // Truy vấn 2: Tìm tất cả những người làm thuê đã làm việc cho ban ngành có tên có chữ T ở đầu.
             IList<Department> listDepartment = database.DB.Query(delegate(Department d) 
             {
                 if (d.DName[0].ToString() == "T") return true;
                 return false;
             });
+
             List<Employee> listCTV2 = new List<Employee>();
+
             for(int i = 0; i < listDepartment.Count; ++i)
             {
                 for(int j = 0; j < listDepartment[i].Employees.Count; ++j)
@@ -385,10 +417,12 @@ namespace Lab05_CompanyManager
                     else
                     {
                         bool check = false;
+
                         for(int k = 0; k < listCTV2.Count; ++k)
                         {
                             if (listCTV2[k] == (Employee)listDepartment[i].Employees[j]) check = true;
                         }
+
                         if (check == true) continue;
                         else
                         {
@@ -397,6 +431,7 @@ namespace Lab05_CompanyManager
                     }
                 }
             }
+
             for(int i = 0; i < listCTV2.Count; ++i)
             {
                 Employee e = listCTV2[i];
@@ -411,6 +446,7 @@ namespace Lab05_CompanyManager
                 string worksfor = (e.WorksFor == null) ? null : e.WorksFor.DName;
                 string manager = (e.Manager == null) ? null : e.Manager.DName;
                 string workson = null;
+
                 if (e.WorksOn != null && e.WorksOn.Count != 0)
                 {
                     for (int j = 0; j < e.WorksOn.Count; ++j)
@@ -421,6 +457,7 @@ namespace Lab05_CompanyManager
 
                 }
                 string dependent = null;
+
                 if (e.Dependents != null && e.Dependents.Count != 0)
                 {
                     for (int j = 0; j < e.Dependents.Count; ++j)
@@ -429,8 +466,10 @@ namespace Lab05_CompanyManager
                         else dependent += ", " + e.Dependents[j].Name;
                     }
                 }
+
                 string supervisor = (e.Supervisor == null) ? null : e.Supervisor.FName + " " + e.Supervisor.LName;
                 string supervisees = null;
+
                 if (e.Supervisees != null && e.Supervisees.Count != 0)
                 {
                     for (int j = 0; j < e.Supervisees.Count; ++j)
@@ -442,17 +481,20 @@ namespace Lab05_CompanyManager
                 dataGridView_CauTruyVan2.Rows.Add(ssn, fname, lname, minit, gender, address, birthdate, salary, worksfor, manager, workson, dependent, supervisor, supervisees);
             }
 
-            // Truy vấn 3: Tìm tất cả những người làm thuê đã làm cho dự án có tên chứa chữ “A” và có thời gian làm việc là < 10h
+            // Truy vấn 3: Tìm tất cả những người làm thuê đã làm cho dự án có tên chứa chữ “A” và có thời gian làm việc là < 10h.
             IList<WorksOn> listWorksOn = database.DB.Query(delegate (WorksOn w) 
             {
                 if ((w.Project.PName.Contains("A") || w.Project.PName.Contains("a")) && w.Hours < 10) return true;
                 return false;
             });
+
             List<Employee> listCTV3 = new List<Employee>();
+
             for(int i = 0; i < listWorksOn.Count; ++i)
             {
                 listCTV3.Add(listWorksOn[i].Employee);
             }
+
             for(int i = 0; i < listCTV3.Count; ++i)
             {
                 Employee e = listCTV3[i];
@@ -467,6 +509,7 @@ namespace Lab05_CompanyManager
                 string worksfor = (e.WorksFor == null) ? null : e.WorksFor.DName;
                 string manager = (e.Manager == null) ? null : e.Manager.DName;
                 string workson = null;
+
                 if (e.WorksOn != null && e.WorksOn.Count != 0)
                 {
                     for (int j = 0; j < e.WorksOn.Count; ++j)
@@ -476,7 +519,9 @@ namespace Lab05_CompanyManager
                     }
 
                 }
+
                 string dependent = null;
+
                 if (e.Dependents != null && e.Dependents.Count != 0)
                 {
                     for (int j = 0; j < e.Dependents.Count; ++j)
@@ -485,8 +530,10 @@ namespace Lab05_CompanyManager
                         else dependent += ", " + e.Dependents[j].Name;
                     }
                 }
+
                 string supervisor = (e.Supervisor == null) ? null : e.Supervisor.FName + " " + e.Supervisor.LName;
                 string supervisees = null;
+
                 if (e.Supervisees != null && e.Supervisees.Count != 0)
                 {
                     for (int j = 0; j < e.Supervisees.Count; ++j)
@@ -498,12 +545,13 @@ namespace Lab05_CompanyManager
                 dataGridView_CauTruyVan3.Rows.Add(ssn, fname, lname, minit, gender, address, birthdate, salary, worksfor, manager, workson, dependent, supervisor, supervisees);
             }
 
-            // Truy vấn 4: Tìm tất cả các công việc được thực hiện bởi dự án có địa điểm là Houston
+            // Truy vấn 4: Tìm tất cả các công việc được thực hiện bởi dự án có địa điểm là Houston.
             IList<Project> listProject = database.DB.Query(delegate (Project p) 
             {
                 if (p.Location == "Houston" && p.WorksOn != null) return true;
                 return false;
             });
+
             for(int i = 0; i < listProject.Count; ++i)
             {
                 Project p = listProject[i];
@@ -512,6 +560,7 @@ namespace Lab05_CompanyManager
                 string location = p.Location;
                 string controlledby = p.ControlledBy.DName;
                 string workson = null;
+
                 if (p.WorksOn != null && p.WorksOn.Count != 0)
                 {
                     for (int j = 0; j < p.WorksOn.Count; ++j)
@@ -1111,7 +1160,7 @@ namespace Lab05_CompanyManager
 
         private void textBox_Ssn_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            // Verify that the key pressed is not CTRL or not a number
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -1122,9 +1171,10 @@ namespace Lab05_CompanyManager
                 e.Handled = true;
             }
         }
+
         private void textBox_Salary_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            // Verify that the key pressed is not CTRL or not a number
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -1135,9 +1185,10 @@ namespace Lab05_CompanyManager
                 e.Handled = true;
             }
         }
+
         private void textBox_PNumberProject_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            // Verify that the key pressed is not CTRL or not a number
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -1148,9 +1199,10 @@ namespace Lab05_CompanyManager
                 e.Handled = true;
             }
         }
+
         private void textBox_NumberDepartment_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            // Verify that the key pressed is not CTRL or not a number
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -1161,9 +1213,10 @@ namespace Lab05_CompanyManager
                 e.Handled = true;
             }
         }
+
         private void textBox_HoursWorksOn_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            // Verify that the key pressed is not CTRL or not a number
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -1174,7 +1227,6 @@ namespace Lab05_CompanyManager
                 e.Handled = true;
             }
         }
-
 
         private void button_Reset_Employee_Click(object sender, EventArgs e)
         {

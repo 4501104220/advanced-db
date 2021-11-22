@@ -11,19 +11,23 @@ namespace Lab05_CompanyManager
     public class Database
     {
         public string DbFileName { get; set; } // File name database
+
         public IObjectContainer DB;
+
         public void CloseDatabase()
         {
             DB.Close(); // Close database file
         } 
+
         public Database()
         {
             DbFileName = "database.yap";
             DB = Db4oEmbedded.OpenFile(DbFileName); // Open database file
         }
+
         public void CreateDatabase()
         {          
-            // Reading txt file and inserting into database
+            // Read txt file and insert into database
             CreateEmployee("data_Employee.txt"); 
             CreateDependents("data_Dependent.txt");
             CreateProject("data_Project.txt");
@@ -34,9 +38,10 @@ namespace Lab05_CompanyManager
             SetWorksFor("SetWorksFor.txt");
             SetSupervisors("SetSupervisors.txt");
         }
+
         public void CreateDependents(string fileName)
         {
-            // Lấy dữ liệu Dependent cũ và xóa đi
+            // Get Dependent data and delete
             IObjectSet result = null;
             Dependent dependent = new Dependent(null, null, null, null);
             result = DB.QueryByExample(dependent);
@@ -47,14 +52,14 @@ namespace Lab05_CompanyManager
                 DB.Delete(result[i]);
             }
 
-            // Đọc dữ liệu từ file .txt
-            if(File.Exists(fileName))
+            // Read data from txt file
+            if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
-                int n = int.Parse(fin.ReadLine()); // Đọc dòng đầu để lấy số lượng Dependent
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
+                int n = int.Parse(fin.ReadLine()); // Read first line to get size of Dependent
 
-                for(int i = 0; i < n; ++i)
+                for (int i = 0; i < n; ++i)
                 {
                     string line = fin.ReadLine();
                     if(line != null)
@@ -101,9 +106,10 @@ namespace Lab05_CompanyManager
                 fs.Close();
             }
         }
+
         public void CreateEmployee(string fileName)
         {
-            // Lấy dữ liệu Employee cũ và xóa đi
+            // Get old Employee data and delete
             IObjectSet result = null;
             Employee employee = new Employee(0, null, null, null, null, null, 0, null);
             result = DB.QueryByExample(employee);
@@ -114,12 +120,12 @@ namespace Lab05_CompanyManager
                 DB.Delete(result[i]);
             }
 
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
-                int n = int.Parse(fin.ReadLine()); // Đọc dòng đầu để lấy số lượng Employee
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
+                int n = int.Parse(fin.ReadLine()); // Read first line to get size of Employee
 
                 for (int i = 0; i < n; ++i)
                 {
@@ -158,9 +164,10 @@ namespace Lab05_CompanyManager
                 fs.Close();
             }
         }
+
         public void CreateProject(string fileName)
         {
-            // Lấy dữ liệu Project cũ và xóa đi
+            // Get old Project data and delete
             IObjectSet result = null;
             Project project = new Project(0, null, null);
             result = DB.QueryByExample(project);
@@ -171,12 +178,12 @@ namespace Lab05_CompanyManager
                 DB.Delete(result[i]);
             }
 
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
-                int n = int.Parse(fin.ReadLine()); // Đọc dòng đầu để lấy số lượng Project 
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
+                int n = int.Parse(fin.ReadLine()); // Read first line to get size of Project 
 
                 for (int i = 0; i < n; ++i)
                 {
@@ -207,7 +214,7 @@ namespace Lab05_CompanyManager
         }
         public void CreateDepartment(string fileName)
         {
-            // Lấy dữ liệu Department cũ và xóa đi
+            // Get old Department data and delete
             IObjectSet result = null;
             Department department = new Department(0, null, null);
             result = DB.QueryByExample(department);
@@ -218,12 +225,12 @@ namespace Lab05_CompanyManager
                 DB.Delete(result[i]);
             }
 
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
-                int n = int.Parse(fin.ReadLine()); // Đọc dòng đầu để lấy số lượng Department 
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
+                int n = int.Parse(fin.ReadLine()); // Read first line to get size of Department  
 
                 for (int i = 0; i < n; ++i)
                 {
@@ -258,9 +265,10 @@ namespace Lab05_CompanyManager
                 fs.Close();
             }
         }
+
         public void CreateWorksOn(string fileName)
         {
-            // Lấy dữ liệu WorksOn cũ và xóa đi
+            // Get old WorksOn data and delete
             IObjectSet result = null;
             WorksOn worksOn = new WorksOn(0);
             result = DB.QueryByExample(worksOn);
@@ -271,13 +279,13 @@ namespace Lab05_CompanyManager
                 DB.Delete(result[i]);
             }
 
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
-                int n = int.Parse(fin.ReadLine()); // Đọc dòng đầu để lấy số lượng WorksOn 
-
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
+                int n = int.Parse(fin.ReadLine()); // Read first line to get size of WorksOn
+                                                 
                 for (int i = 0; i < n; ++i)
                 {
                     string line = fin.ReadLine();
@@ -373,7 +381,7 @@ namespace Lab05_CompanyManager
         }
         public void SetManager(string fileName)
         {
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
                 FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
@@ -430,11 +438,11 @@ namespace Lab05_CompanyManager
         }
         public void SetControlledBy(string fileName)
         {
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
                 int n = int.Parse(fin.ReadLine()); 
 
                 for (int i = 0; i < n; ++i)
@@ -489,11 +497,11 @@ namespace Lab05_CompanyManager
         }
         public void SetWorksFor(string fileName)
         {
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
                 int n = int.Parse(fin.ReadLine()); 
 
                 for (int i = 0; i < n; ++i)
@@ -548,11 +556,11 @@ namespace Lab05_CompanyManager
         }
         public void SetSupervisors(string fileName)
         {
-            // Đọc dữ liệu từ file .txt
+            // Read data from txt file
             if (File.Exists(fileName))
             {
-                FileStream fs = new FileStream(fileName, FileMode.Open); // Mở file
-                StreamReader fin = new StreamReader(fs); // Tạo biến đọc file
+                FileStream fs = new FileStream(fileName, FileMode.Open); // Open file
+                StreamReader fin = new StreamReader(fs); // Initialize variable to read file
                 int n = int.Parse(fin.ReadLine());
 
                 for (int i = 0; i < n; ++i)
